@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onCreate()");
     }
 
     private void onButtonClicked() {
@@ -52,12 +54,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
         Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onStart()");
     }
 
     @Override
     protected void onSaveInstanceState(Bundle saveInstanceState){
         super.onSaveInstanceState(saveInstanceState);
         Toast.makeText(getApplicationContext(), "onSaveInstanceState()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onSaveInstanceState()");
         //saveInstanceState.putInt("Counter", counter);
     }
 
@@ -65,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestoreInstanceState(Bundle saveInstanceState){
         super.onRestoreInstanceState(saveInstanceState);
         Toast.makeText(getApplicationContext(), "Повторный запуск!! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onRestoreInstanceState()");
         //counter = saveInstanceState.getInt("Counter");
         //textCounter.setText(((Integer)counter).toString());
     }
@@ -73,30 +78,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume() {
         super.onResume();
         Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onPause()");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onStop()");
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
         Toast.makeText(getApplicationContext(), "onRestart()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onRestart()");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Toast.makeText(getApplicationContext(), "onDestroy()", Toast.LENGTH_SHORT).show();
+        Log.d("MainActivity","onDestroy()");
     }
 
 }
