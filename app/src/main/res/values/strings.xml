@@ -4,4 +4,5 @@
     <string name="button2">Moscow</string>
     <string name="button3">Saint-Petersburg</string>
     <string name="button4">London</string>
+    <string name="back">Back</string>
 </resources>
